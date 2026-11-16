@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamentos | Descubre Colombia</title>
+    <!-- Estilos generales (header, nav, colores) y estilos propios de esta pagina -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/departamentos.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO (igual al del index) -->
+    <header class="header">
+
+        <div class="logo">
+            <h1>Descubre <span>Colombia</span></h1>
+        </div>
+
+        <nav class="nav">
+            <a href="../index.html">Inicio</a>
+            <a href="departamentos.html" class="active">Departamentos</a>
+            <a href="sabores.html">Sabores</a>
+        </nav>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- TITULO DE LA PAGINA -->
+        <section class="page-header">
+            <span class="tag">GEOGRAFIA</span>
+            <h2>Departamentos de <span>Colombia</span></h2>
+            <p>Conoce la region, poblacion, superficie y descripcion de cada departamento del pais.</p>
+        </section>
+
+        <!-- RESUMEN: departamentos por region (lo llena el JS) -->
+        <section class="resumen">
+            <h3>Departamentos por region</h3>
+            <div id="conteo-regiones" class="conteo-regiones"></div>
+        </section>
+
+        <!-- MENSAJE DE CARGA (el JS lo oculta cuando llegan los datos) -->
+        <p id="cargando" class="mensaje">Cargando departamentos...</p>
+
+        <!-- MENSAJE DE ERROR (oculto; el JS lo muestra si falla el fetch) -->
+        <p id="error" class="mensaje mensaje-error" hidden></p>
+
+        <!-- CONTENEDOR DE TARJETAS (el JS crea una tarjeta por departamento) -->
+        <section id="lista-departamentos" class="lista-departamentos"></section>
+
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer">
+        <p>Datos obtenidos de <a href="https://api-colombia.com/" target="_blank">API Colombia</a></p>
+    </footer>
+
+    <!-- defer: el JS se ejecuta cuando el HTML ya esta cargado -->
+    <script src="../js/departamentos.js" defer></script>
+
+</body>
+
+</html>
