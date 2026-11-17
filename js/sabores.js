@@ -7,13 +7,14 @@ const mensajeError = document.getElementById("error");
 const lista = document.getElementById("lista-platos");
 const totalPlatos = document.getElementById("total-platos");
 
-// Estas imagenes de la API no cargan, entonces las cambie por unas de Wikimedia
+// Estas imagenes de la API no cargan, entonces las descargue de Wikimedia
+// y las guarde en la carpeta img/platos
 const imagenesArregladas = {
-    "Tamal Tolimense": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Tamal_tolimense.jpg/500px-Tamal_tolimense.jpg",
-    "Arroz de Lisa": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Arroz_de_liza.jpg/500px-Arroz_de_liza.jpg",
-    "Ternera a la llanera": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Ternera_a_la_llanera.jpg/500px-Ternera_a_la_llanera.jpg",
-    "Dulce de guayaba": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bocadillo.jpg/500px-Bocadillo.jpg",
-    "Arroz con pollo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Arroz_con_pollo.jpg/500px-Arroz_con_pollo.jpg"
+    "Tamal Tolimense": "../img/platos/tamal-tolimense.jpg",
+    "Arroz de Lisa": "../img/platos/arroz-de-lisa.jpg",
+    "Ternera a la llanera": "../img/platos/ternera-a-la-llanera.jpg",
+    "Dulce de guayaba": "../img/platos/dulce-de-guayaba.jpg",
+    "Arroz con pollo": "../img/platos/arroz-con-pollo.jpg"
 };
 
 // Por si alguna otra imagen falla, se pone esta
