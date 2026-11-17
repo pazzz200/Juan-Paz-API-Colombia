@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores | Descubre Colombia</title>
+    <!-- Estilos generales y los de esta pagina -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sabores.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+
+        <div class="logo">
+            <h1>Descubre <span>Colombia</span></h1>
+        </div>
+
+        <nav class="nav">
+            <a href="../index.html">Inicio</a>
+            <a href="departamentos.html">Departamentos</a>
+            <a href="sabores.html" class="active">Sabores</a>
+        </nav>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- TITULO DE LA PAGINA -->
+        <section class="page-header">
+            <span class="tag">GASTRONOMIA</span>
+            <h2>Sabores de <span>Colombia</span></h2>
+            <p>Descubre los platos tipicos de cada departamento y lo que los hace especiales.</p>
+        </section>
+
+        <!-- EXTRA: total de platos (el JS pone el numero) -->
+        <section class="resumen">
+            <p class="total-platos">Total de platos: <span id="total-platos">0</span></p>
+        </section>
+
+        <!-- MENSAJE DE CARGA (el JS lo oculta cuando llegan los datos) -->
+        <p id="cargando" class="mensaje">Cargando platos tipicos...</p>
+
+        <!-- MENSAJE DE ERROR (oculto, el JS lo muestra si falla el fetch) -->
+        <p id="error" class="mensaje mensaje-error" hidden></p>
+
+        <!-- CONTENEDOR DE TARJETAS (el JS crea una tarjeta por plato) -->
+        <section id="lista-platos" class="lista-platos"></section>
+
+    </main>
+
+    <!-- defer: el JS se ejecuta cuando el HTML ya esta cargado -->
+    <script src="../js/sabores.js" defer></script>
+
+</body>
+
+</html>

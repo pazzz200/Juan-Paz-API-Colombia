@@ -1,0 +1,156 @@
+
+/*
+   ENCABEZADO DE LA PAGINA
+ */
+
+.page-header {
+    padding: 60px 8% 30px;
+    text-align: center;
+}
+
+.page-header h2 {
+    font-size: 40px;
+    color: #1b4332;
+    margin: 15px 0;
+}
+
+.page-header h2 span {
+    color: #40916c;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+/*
+   TOTAL DE PLATOS
+ */
+
+.resumen {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.total-platos {
+    display: inline-block;
+    background-color: white;
+    padding: 10px 22px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 30px;
+
+    color: #555;
+}
+
+.total-platos span {
+    color: #40916c;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/*
+   MENSAJES (cargando y error)
+ */
+
+.mensaje {
+    text-align: center;
+    color: #40916c;
+    font-size: 17px;
+    padding: 30px;
+}
+
+.mensaje-error {
+    color: #b42318;
+    background-color: #fdecea;
+
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/*
+   TARJETAS DE PLATOS
+ */
+
+.lista-platos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 8% 60px;
+}
+
+.tarjeta-plato {
+    background-color: white;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+
+    /* para que la imagen no se salga de las esquinas redondas */
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.tarjeta-plato:hover {
+    border-color: #40916c;
+    transform: translateY(-3px);
+}
+
+/* todas las fotos del mismo alto, recortadas sin deformarse */
+.tarjeta-plato img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.info-plato {
+    padding: 20px;
+}
+
+.info-plato .departamento {
+    color: #40916c;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.info-plato h3 {
+    font-size: 20px;
+    color: #1b4332;
+    margin: 8px 0 12px;
+}
+
+.info-plato .descripcion {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/*
+   DISEÑO RESPONSIVO
+ */
+
+@media (max-width: 900px) {
+
+    .lista-platos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .page-header h2 {
+        font-size: 30px;
+    }
+
+    .lista-platos {
+        grid-template-columns: 1fr;
+        padding: 0 5% 40px;
+    }
+}
